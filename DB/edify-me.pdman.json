@@ -1,0 +1,1542 @@
+{
+  "modules": [
+    {
+      "name": "EnterpriseCredit",
+      "entities": [
+        {
+          "title": "TBLEnterprise",
+          "fields": [
+            {
+              "name": "EnterpriseID",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "主键",
+              "autoIncrement": true,
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "KeyNo",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "内部KeyNo"
+            },
+            {
+              "name": "Name",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "公司名称"
+            },
+            {
+              "name": "OperName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "法人名称"
+            },
+            {
+              "name": "StartDate",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "成立日期"
+            },
+            {
+              "name": "Status",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "企业状态"
+            },
+            {
+              "name": "No",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "注册号"
+            },
+            {
+              "name": "CreditCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "社会统一信用代码"
+            },
+            {
+              "name": "RespData",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "企业基础数据"
+            },
+            {
+              "name": "Origin",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "数据来源"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATEDBY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATEDON",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATEDBY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATEDON",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "企业信息"
+        },
+        {
+          "title": "TBLEnterpriseDetail",
+          "fields": [
+            {
+              "name": "EnterpriseDetailID",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "KeyNo",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "内部KeyNo",
+              "relationNoShow": false
+            },
+            {
+              "name": "Name",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "公司名称"
+            },
+            {
+              "name": "No",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "注册号"
+            },
+            {
+              "name": "BelongOrg",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "登记机关"
+            },
+            {
+              "name": "OperName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "法人名"
+            },
+            {
+              "name": "OperType",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "法人类型"
+            },
+            {
+              "name": "StartDate",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "成立日期"
+            },
+            {
+              "name": "EndDate",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "吊销日期"
+            },
+            {
+              "name": "Status",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "企业状态"
+            },
+            {
+              "name": "Province",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "省份"
+            },
+            {
+              "name": "UpdatedDate",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "更新日期"
+            },
+            {
+              "name": "CreditCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "社会统一信息代码"
+            },
+            {
+              "name": "RegistCapi",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "注册资本"
+            },
+            {
+              "name": "EconKind",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "企业类型"
+            },
+            {
+              "name": "Address",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "企业地址"
+            },
+            {
+              "name": "Scope",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "经营范围"
+            },
+            {
+              "name": "TermStart",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "营业开始日期"
+            },
+            {
+              "name": "TeamEnd",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "营业结束日期"
+            },
+            {
+              "name": "CheckDate",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "发照日期"
+            },
+            {
+              "name": "OrgNo",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "组织机构代码"
+            },
+            {
+              "name": "IsOnStock",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "是否上市"
+            },
+            {
+              "name": "StockNumber",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "上市公司代码"
+            },
+            {
+              "name": "UsedStockNumber",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "股票曾用名"
+            },
+            {
+              "name": "StockType",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "上市类型"
+            },
+            {
+              "name": "ImageUrl",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "企业Logo"
+            },
+            {
+              "name": "StaffNumRange",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "人员规模"
+            },
+            {
+              "name": "CategoryScore",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "行业分数"
+            },
+            {
+              "name": "PercentileScore",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "企业评分"
+            },
+            {
+              "name": "SocialStaffNum",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "参保人数"
+            },
+            {
+              "name": "Tags",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "企业标签"
+            },
+            {
+              "name": "TaxNumber",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "纳税人识别号"
+            },
+            {
+              "name": "EnglishName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "英文名"
+            },
+            {
+              "name": "Alias",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "简称"
+            },
+            {
+              "name": "ActualCapital",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "实收注册资金"
+            },
+            {
+              "name": "RegCapitalCurrency",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "注册资本币种"
+            },
+            {
+              "name": "ActualCapitalCurrency",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "实收注册资本币种"
+            },
+            {
+              "name": "OriginalName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "曾用名"
+            },
+            {
+              "name": "EndReason",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "吊销原因"
+            },
+            {
+              "name": "CancelDate",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "注销日期"
+            },
+            {
+              "name": "CancelReason",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "注销原因"
+            },
+            {
+              "name": "RespData",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "企业详细信息"
+            },
+            {
+              "name": "Origin",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "数据来源"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATEDBY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATEDON",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATEDBY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATEDON",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "企业详细信息",
+          "remark": "企业详细信息"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [
+          {
+            "shape": "table",
+            "title": "TBLEnterprise",
+            "moduleName": false,
+            "x": 210,
+            "y": 80,
+            "id": "02d2063e"
+          },
+          {
+            "shape": "table",
+            "title": "TBLEnterpriseDetail",
+            "moduleName": false,
+            "x": 680,
+            "y": 50,
+            "id": "8a8d16b4"
+          }
+        ],
+        "edges": []
+      },
+      "associations": []
+    },
+    {
+      "name": "EdifyMe",
+      "entities": [
+        {
+          "title": "TBL_USER",
+          "fields": [
+            {
+              "name": "USER_ID",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "用户ID",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": false
+            },
+            {
+              "name": "User_Code",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "用户Code"
+            },
+            {
+              "name": "User_Password",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "用户密码"
+            },
+            {
+              "name": "USER_NAME",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "用户名称"
+            },
+            {
+              "name": "SEX",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "性别"
+            },
+            {
+              "name": "MOBILE",
+              "type": "ShortString-20",
+              "remark": "",
+              "chnname": "手机号"
+            },
+            {
+              "name": "EMAIL",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "邮箱"
+            },
+            {
+              "name": "ID_CARD",
+              "type": "ShortString-20",
+              "remark": "",
+              "chnname": "身份证号"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "用户",
+          "remark": "用户"
+        },
+        {
+          "title": "TBL_ROLE",
+          "fields": [
+            {
+              "name": "ROLE_ID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "角色ID",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "ROLE_NAME",
+              "type": "ShortString-20",
+              "remark": "",
+              "chnname": "角色名称"
+            },
+            {
+              "name": "ROLE_CODE",
+              "type": "ShortString-20",
+              "remark": "",
+              "chnname": "角色CODE"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "角色"
+        },
+        {
+          "title": "TBL_USER_ROLE",
+          "fields": [
+            {
+              "name": "USER_ROLE_ID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "用户角色ID",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "USER_ID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "用户ID"
+            },
+            {
+              "name": "ROLE_ID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "角色ID"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "用户角色"
+        },
+        {
+          "title": "TBL_MENU",
+          "fields": [
+            {
+              "name": "MENU_ID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "菜单ID"
+            },
+            {
+              "name": "MENU_NAME",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "菜单名称"
+            },
+            {
+              "name": "MENU_CODE",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "菜单CODE"
+            },
+            {
+              "name": "MENU_ORDER",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "排序"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "菜单"
+        },
+        {
+          "title": "TBL_ROLE_MENU",
+          "fields": [
+            {
+              "name": "ROLE_MENU_ID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "角色菜单ID",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "ROLE_ID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "角色ID"
+            },
+            {
+              "name": "MENU_ID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "菜单ID"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "角色菜单"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [
+          {
+            "shape": "table",
+            "title": "TBL_USER",
+            "moduleName": false,
+            "x": -70,
+            "y": 20,
+            "id": "132a26e3"
+          },
+          {
+            "shape": "table",
+            "title": "TBL_ROLE_MENU",
+            "moduleName": false,
+            "x": 780,
+            "y": 350,
+            "id": "2803142e"
+          },
+          {
+            "shape": "table",
+            "title": "TBL_ROLE",
+            "moduleName": false,
+            "x": 400,
+            "y": 0,
+            "id": "2744d7fb"
+          },
+          {
+            "shape": "table",
+            "title": "TBL_USER_ROLE",
+            "moduleName": false,
+            "x": 100,
+            "y": 360,
+            "id": "e8c331b0"
+          },
+          {
+            "shape": "table",
+            "title": "TBL_MENU",
+            "moduleName": false,
+            "x": 880,
+            "y": 10,
+            "id": "3ccdaddd"
+          }
+        ],
+        "edges": [
+          {
+            "shape": "polyLineFlow",
+            "source": "132a26e3",
+            "target": "e8c331b0",
+            "id": "45f02fb9",
+            "controlPoints": [
+              {
+                "x": 68.6552734375,
+                "y": 132.95
+              },
+              {
+                "x": -45.1943359375,
+                "y": 302.1973684210526
+              }
+            ]
+          },
+          {
+            "shape": "polyLineFlow",
+            "source": "2744d7fb",
+            "target": "e8c331b0",
+            "id": "da4dc5de",
+            "controlPoints": [
+              {
+                "x": 255.759765625,
+                "y": 82.93421052631578
+              },
+              {
+                "x": 245.1943359375,
+                "y": 302.1973684210526
+              }
+            ],
+            "sourceAnchor": 14
+          },
+          {
+            "shape": "polyLineFlow",
+            "source": "2744d7fb",
+            "target": "2803142e",
+            "id": "ba83ce95",
+            "controlPoints": [
+              {
+                "x": 544.240234375,
+                "y": 82.93421052631578
+              },
+              {
+                "x": 633.8095703125,
+                "y": 292.1973684210526
+              }
+            ],
+            "sourceAnchor": 15
+          },
+          {
+            "shape": "polyLineFlow",
+            "source": "3ccdaddd",
+            "target": "2803142e",
+            "id": "0f1a9250",
+            "controlPoints": [
+              {
+                "x": 752.771484375,
+                "y": 102.94047619047618
+              },
+              {
+                "x": 926.1904296875,
+                "y": 292.1973684210526
+              }
+            ],
+            "sourceAnchor": 16
+          }
+        ]
+      },
+      "associations": []
+    }
+  ],
+  "dataTypeDomains": {
+    "datatype": [
+      {
+        "name": "默认字串",
+        "code": "DefaultString",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(32)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(32)"
+          }
+        }
+      },
+      {
+        "name": "标识号",
+        "code": "IdOrKey",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(32)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(32)"
+          }
+        }
+      },
+      {
+        "name": "名称",
+        "code": "Name",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(128)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(128)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(128)"
+          }
+        }
+      },
+      {
+        "name": "备注说明",
+        "code": "Intro",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(512)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(512)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(512)"
+          }
+        }
+      },
+      {
+        "name": "字串-20",
+        "code": "ShortString-20",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(20)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(20)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(20)"
+          }
+        }
+      },
+      {
+        "name": "字串-短",
+        "code": "ShortString",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(128)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(128)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(128)"
+          }
+        }
+      },
+      {
+        "name": "字串-中",
+        "code": "MiddleString",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(1024)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(1024)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(1024)"
+          }
+        }
+      },
+      {
+        "name": "字串-长",
+        "code": "LongString",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(3120)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(3120)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(3120)"
+          }
+        }
+      },
+      {
+        "name": "大文本",
+        "code": "LongText",
+        "apply": {
+          "MYSQL": {
+            "type": "TEXT"
+          },
+          "ORACLE": {
+            "type": "CLOB"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "name": "大文本-JSON",
+        "code": "JSONTEXT",
+        "apply": {
+          "MYSQL": {
+            "type": "TEXT"
+          },
+          "ORACLE": {
+            "type": "CLOB"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "json"
+          }
+        }
+      },
+      {
+        "name": "小数",
+        "code": "Double",
+        "apply": {
+          "MYSQL": {
+            "type": "DECIMAL(64,16)"
+          },
+          "ORACLE": {
+            "type": "NUMBER(64,16)"
+          },
+          "JAVA": {
+            "type": "Double"
+          },
+          "POSTGRESQL": {
+            "type": "decimal(64.16)"
+          }
+        }
+      },
+      {
+        "name": "比例",
+        "code": "Ratio",
+        "apply": {
+          "MYSQL": {
+            "type": "DECIMAL(4,2)"
+          },
+          "ORACLE": {
+            "type": "NUMBER(4,2)"
+          },
+          "JAVA": {
+            "type": "Double"
+          },
+          "POSTGRESQL": {
+            "type": "decimal(4,2)"
+          }
+        }
+      },
+      {
+        "name": "整数",
+        "code": "Integer",
+        "apply": {
+          "MYSQL": {
+            "type": "INT"
+          },
+          "ORACLE": {
+            "type": "INT"
+          },
+          "JAVA": {
+            "type": "Integer"
+          },
+          "POSTGRESQL": {
+            "type": "Integer"
+          }
+        }
+      },
+      {
+        "name": "金额",
+        "code": "Money",
+        "apply": {
+          "MYSQL": {
+            "type": "DECIMAL(32,8)"
+          },
+          "ORACLE": {
+            "type": "NUMBER(32,8)"
+          },
+          "JAVA": {
+            "type": "Double"
+          },
+          "POSTGRESQL": {
+            "type": "decimal(32,8)"
+          }
+        }
+      },
+      {
+        "name": "是否",
+        "code": "YesNo",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(1)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(1)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "name": "数据字典",
+        "code": "Dict",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(32)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(32)"
+          }
+        }
+      },
+      {
+        "name": "日期",
+        "code": "Date",
+        "apply": {
+          "MYSQL": {
+            "type": "DATE"
+          },
+          "ORACLE": {
+            "type": "DATE"
+          },
+          "JAVA": {
+            "type": "Date"
+          },
+          "POSTGRESQL": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "name": "日期时间",
+        "code": "DateTime",
+        "apply": {
+          "MYSQL": {
+            "type": "DATETIME"
+          },
+          "ORACLE": {
+            "type": "DATE"
+          },
+          "JAVA": {
+            "type": "Date"
+          },
+          "POSTGRESQL": {
+            "type": "timestamp without time zone"
+          }
+        }
+      }
+    ],
+    "database": [
+      {
+        "code": "MYSQL",
+        "template": "DROP TABLE {{=it.entity.title}};\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.pk ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'",
+        "fileShow": true,
+        "defaultDatabase": true,
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};/*SkipError*/",
+        "rebuildTableTemplate": "create table PDMAN_UP_{{=it.oldEntity.title}}\r\nas select * from {{=it.oldEntity.title}};\r\n$blankline\r\n\r\ndrop table {{=it.oldEntity.title}};\r\n$blankline\r\n\r\nCREATE TABLE {{=it.newEntity.title}}(\r\n{{ pkList = [] ; }}\r\n{{~it.newEntity.fields:field:index}}\r\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\r\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\r\n{{~}}\r\n{{? pkList.length >0 }}\r\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\r\n{{?}}\r\n) COMMENT = '{{=it.func.join(it.newEntity.chnname,it.newEntity.remark,';') }}';\r\n$blankline\r\n\r\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.newEntity.fields) ;}}\r\ninsert into {{=it.newEntity.title}}(\r\n{{~sameCols:field:index}}\r\n    {{=field.name}}{{? index<it.newEntity.fields.length-1}},{{?}}\r\n{{~}}\r\n) \r\nvalues\r\nselect \r\n{{~sameCols:field:index}}\r\n    {{=field.name}}{{? index<it.oldEntity.fields.length-1}},{{?}}\r\n{{~}}\r\nfrom PDMAN_UP_{{=it.oldEntity.title}};\r\n$blankline\r\n\r\ndrop table PDMAN_UP_{{=it.oldEntity.title}};",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.pk}}PRIMARY KEY{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}} {{? it.field.addAfter}}AFTER {{=it.field.addAfter}}{{?}};",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}};",
+        "deleteFieldTemplate": "ALTER TABLE {{=it.entity.title}} DROP {{=it.field.name}};",
+        "deleteIndexTemplate": "ALTER TABLE {{=it.entity.title}} DROP INDEX {{=it.index.name}};",
+        "createIndexTemplate": "ALTER TABLE {{=it.entity.title}} ADD {{? it.index.isUnique}}UNIQUE{{?}} {{=it.index.name}}({{=it.func.join(...it.index.fields,',')}});",
+        "updateTableComment": "ALTER TABLE {{=it.entity.title}} COMMENT '{{=it.entity.chnname}}';"
+      },
+      {
+        "code": "ORACLE",
+        "template": "DROP TABLE {{=it.entity.title}};\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}  {{= field.pk ? 'NOT NULL' : '' }} {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\nCOMMENT ON TABLE {{=it.entity.title}} IS '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}';\n{{~it.entity.fields:field:index}}\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS '{{=it.func.join(field.chnname,field.remark,';')}}';\n{{~}}",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}  {{= field.notNull ? 'NOT NULL' : '' }} {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\nCOMMENT ON TABLE '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}';\n{{~it.entity.fields:field:index}}\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS '{{=it.func.join(field.chnname,field.remark,';')}}';\n{{~}}",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};/*SkipError*/",
+        "rebuildTableTemplate": "create table PDMAN_UP_{{=it.oldEntity.title}}\r\nas select * from {{=it.oldEntity.title}};\r\n$blankline\r\n\r\ndrop table {{=it.oldEntity.title}};\r\n$blankline\r\n\r\nCREATE TABLE {{=it.newEntity.title}}(\r\n{{ pkList = [] ; }}\r\n{{~it.newEntity.fields:field:index}}\r\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\r\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\r\n{{~}}\r\n{{? pkList.length >0 }}\r\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\r\n{{?}}\r\n) COMMENT = '{{=it.func.join(it.newEntity.chnname,it.newEntity.remark,';') }}';\r\n$blankline\r\n\r\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.newEntity.fields) ;}}\r\ninsert into {{=it.newEntity.title}}(\r\n{{~sameCols:field:index}}\r\n    {{=field.name}}{{? index<it.newEntity.fields.length-1}},{{?}}\r\n{{~}}\r\n) \r\nvalues\r\nselect \r\n{{~sameCols:field:index}}\r\n    {{=field.name}}{{? index<it.oldEntity.fields.length-1}},{{?}}\r\n{{~}}\r\nfrom PDMAN_UP_{{=it.oldEntity.title}};\r\n$blankline\r\n\r\ndrop table PDMAN_UP_{{=it.oldEntity.title}};",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD({{=it.field.name}} {{=it.field.type}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.notNull}}NOT NULL{{?}});\r\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=it.field.name}} is '{{=it.field.chnname}}';",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY({{=it.field.name}} {{=it.field.type}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.notNull}}NOT NULL{{?}});\r\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=it.field.name}} is '{{=it.field.chnname}}';",
+        "deleteFieldTemplate": "ALTER TABLE {{=it.entity.title}} DROP({{=it.field.name}});",
+        "deleteIndexTemplate": "DROP INDEX {{=it.entity.title}}.{{=it.index.name}};",
+        "createIndexTemplate": "CREATE {{? it.index.isUnique}}UNIQUE{{?}} INDEX {{=it.index.name}} ON {{=it.entity.title}}({{=it.func.join(...it.index.fields,',')}});",
+        "updateTableComment": "COMMENT ON TABLE {{=it.entity.title}} is '{{=it.entity.chnname}}';"
+      },
+      {
+        "code": "JAVA",
+        "template": "package group.rober.pdman.{{=it.module.name}}.entity;\n$blankline\nimport javax.persistence.*;\nimport java.io.Serializable;\nimport java.util.Date;\n$blankline\n$blankline\n\n/** {{=it.entity.chnname}} */\n@Table(name=\"{{=it.entity.title}}\")\npublic class {{=it.func.camel(it.entity.title,true) }} implements Serializable,Cloneable{\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    {{? field.pk }}\n    @Id\n    @GeneratedValue\n    {{?}}\n    private {{=field.type}} {{=it.func.camel(field.name,false)}} ;\n{{~}}\n$blankline\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public {{=field.type}} get{{=it.func.camel(field.name,true)}}(){\n        return this.{{=it.func.camel(field.name,false)}};\n    }\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public void set{{=it.func.camel(field.name,true)}}({{=field.type}} {{= it.func.camel(field.name,false) }}){\n        this.{{=it.func.camel(field.name,false)}} = {{= it.func.camel(field.name,false) }};\n    }\n{{~}}\n}",
+        "createTableTemplate": "package group.rober.pdman.{{=it.module.name}}.entity;\n$blankline\nimport javax.persistence.*;\nimport java.io.Serializable;\nimport java.util.Date;\n$blankline\n$blankline\n@Table(name=\"{{=it.entity.title}}\")\npublic class {{=it.func.camel(it.entity.title,true) }} implements Serializable,Cloneable{\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    {{? field.pk }}\n    @Id\n    @GeneratedValue\n    {{?}}\n    private {{=field.type}} {{=it.func.camel(field.name,false)}} ;\n{{~}}\n$blankline\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public {{=field.type}} get{{=it.func.camel(field.name,true)}}(){\n        return this.{{=it.func.camel(field.name,false)}};\n    }\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public void set{{=it.func.camel(field.name,true)}}({{=field.type}} {{= it.func.camel(field.name,false) }}){\n        this.{{=it.func.camel(field.name,false)}} = {{= it.func.camel(field.name,false) }};\n    }\n{{~}}\n}",
+        "deleteTableTemplate": "",
+        "rebuildTableTemplate": "",
+        "createFieldTemplate": "",
+        "updateFieldTemplate": "",
+        "deleteFieldTemplate": "",
+        "deleteIndexTemplate": "",
+        "createIndexTemplate": "",
+        "updateTableComment": ""
+      },
+      {
+        "code": "POSTGRESQL",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}  {{= field.notNull ? 'NOT NULL' : '' }} {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\nCOMMENT ON TABLE {{=it.entity.title}} IS '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}';\n{{~it.entity.fields:field:index}}\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS '{{=it.func.join(field.chnname,field.remark,';')}}';\n{{~}}",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};/*SkipError*/",
+        "updateTableComment": "COMMENT ON TABLE {{=it.entity.title}} is '{{=it.entity.chnname}}';"
+      }
+    ]
+  }
+}
