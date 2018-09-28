@@ -190,19 +190,19 @@
             },
             {
               "name": "OperType",
-              "type": "DefaultString",
+              "type": "Integer",
               "remark": "",
               "chnname": "法人类型"
             },
             {
               "name": "StartDate",
-              "type": "DefaultString",
+              "type": "DateTime",
               "remark": "",
               "chnname": "成立日期"
             },
             {
               "name": "EndDate",
-              "type": "DefaultString",
+              "type": "DateTime",
               "remark": "",
               "chnname": "吊销日期"
             },
@@ -220,7 +220,7 @@
             },
             {
               "name": "UpdatedDate",
-              "type": "DefaultString",
+              "type": "DateTime",
               "remark": "",
               "chnname": "更新日期"
             },
@@ -238,37 +238,37 @@
             },
             {
               "name": "EconKind",
-              "type": "DefaultString",
+              "type": "ShortString",
               "remark": "",
               "chnname": "企业类型"
             },
             {
               "name": "Address",
-              "type": "DefaultString",
+              "type": "ShortString-50",
               "remark": "",
               "chnname": "企业地址"
             },
             {
               "name": "Scope",
-              "type": "DefaultString",
+              "type": "MiddleString",
               "remark": "",
               "chnname": "经营范围"
             },
             {
               "name": "TermStart",
-              "type": "DefaultString",
+              "type": "DateTime",
               "remark": "",
               "chnname": "营业开始日期"
             },
             {
               "name": "TeamEnd",
-              "type": "DefaultString",
+              "type": "DateTime",
               "remark": "",
               "chnname": "营业结束日期"
             },
             {
               "name": "CheckDate",
-              "type": "DefaultString",
+              "type": "DateTime",
               "remark": "",
               "chnname": "发照日期"
             },
@@ -304,13 +304,13 @@
             },
             {
               "name": "ImageUrl",
-              "type": "DefaultString",
+              "type": "ShortString",
               "remark": "",
               "chnname": "企业Logo"
             },
             {
               "name": "StaffNumRange",
-              "type": "DefaultString",
+              "type": "ShortString-256",
               "remark": "",
               "chnname": "人员规模"
             },
@@ -328,13 +328,13 @@
             },
             {
               "name": "SocialStaffNum",
-              "type": "DefaultString",
+              "type": "Integer",
               "remark": "",
               "chnname": "参保人数"
             },
             {
               "name": "Tags",
-              "type": "DefaultString",
+              "type": "ShortString",
               "remark": "",
               "chnname": "企业标签"
             },
@@ -382,21 +382,45 @@
             },
             {
               "name": "EndReason",
-              "type": "DefaultString",
+              "type": "ShortString",
               "remark": "",
               "chnname": "吊销原因"
             },
             {
               "name": "CancelDate",
-              "type": "DefaultString",
+              "type": "DateTime",
               "remark": "",
               "chnname": "注销日期"
             },
             {
               "name": "CancelReason",
-              "type": "DefaultString",
+              "type": "ShortString",
               "remark": "",
               "chnname": "注销原因"
+            },
+            {
+              "name": "WebSite",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "网站"
+            },
+            {
+              "name": "Email",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "邮箱"
+            },
+            {
+              "name": "PhoneNumber",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "手机号"
+            },
+            {
+              "name": "Industry",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "行业信息"
             },
             {
               "name": "RespData",
@@ -486,6 +510,142 @@
           ],
           "chnname": "企业详细信息",
           "remark": "企业详细信息"
+        },
+        {
+          "title": "TBLVisitorCounter",
+          "fields": [
+            {
+              "name": "VisitorCounterID",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": false
+            },
+            {
+              "name": "UserID",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "用户ID"
+            },
+            {
+              "name": "UserName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "用户名称"
+            },
+            {
+              "name": "APIType",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "访问接口类型"
+            },
+            {
+              "name": "APIUrl",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "访问接口地址"
+            },
+            {
+              "name": "IP",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "访问来源IP"
+            },
+            {
+              "name": "VisitorTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "访问时间"
+            },
+            {
+              "name": "Device",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "访问设备"
+            },
+            {
+              "name": "Source",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "访问来源"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATED_BY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATED_TIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "访问统计"
         }
       ],
       "graphCanvas": {
@@ -527,13 +687,13 @@
               "autoIncrement": false
             },
             {
-              "name": "User_Code",
+              "name": "USER_CODE",
               "type": "DefaultString",
               "remark": "",
               "chnname": "用户Code"
             },
             {
-              "name": "User_Password",
+              "name": "USER_PASSWORD",
               "type": "DefaultString",
               "remark": "",
               "chnname": "用户密码"
@@ -1255,6 +1415,42 @@
         }
       },
       {
+        "name": "字串-50",
+        "code": "ShortString-50",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(50)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(50)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(50)"
+          }
+        }
+      },
+      {
+        "name": "字串-256",
+        "code": "ShortString-256",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(256)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(256)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(256)"
+          }
+        }
+      },
+      {
         "name": "字串-短",
         "code": "ShortString",
         "apply": {
@@ -1466,7 +1662,7 @@
             "type": "Date"
           },
           "POSTGRESQL": {
-            "type": "date"
+            "type": "DATE"
           }
         }
       },
@@ -1491,10 +1687,17 @@
     ],
     "database": [
       {
+        "code": "POSTGRESQL",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}  {{= field.notNull ? 'NOT NULL' : '' }} {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\nCOMMENT ON TABLE {{=it.entity.title}} IS '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}';\n{{~it.entity.fields:field:index}}\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS '{{=it.func.join(field.chnname,field.remark,';')}}';\n{{~}}",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};/*SkipError*/",
+        "updateTableComment": "COMMENT ON TABLE {{=it.entity.title}} is '{{=it.entity.chnname}}';",
+        "defaultDatabase": true
+      },
+      {
         "code": "MYSQL",
         "template": "DROP TABLE {{=it.entity.title}};\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.pk ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'",
         "fileShow": true,
-        "defaultDatabase": true,
+        "defaultDatabase": false,
         "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'",
         "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};/*SkipError*/",
         "rebuildTableTemplate": "create table PDMAN_UP_{{=it.oldEntity.title}}\r\nas select * from {{=it.oldEntity.title}};\r\n$blankline\r\n\r\ndrop table {{=it.oldEntity.title}};\r\n$blankline\r\n\r\nCREATE TABLE {{=it.newEntity.title}}(\r\n{{ pkList = [] ; }}\r\n{{~it.newEntity.fields:field:index}}\r\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\r\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\r\n{{~}}\r\n{{? pkList.length >0 }}\r\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\r\n{{?}}\r\n) COMMENT = '{{=it.func.join(it.newEntity.chnname,it.newEntity.remark,';') }}';\r\n$blankline\r\n\r\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.newEntity.fields) ;}}\r\ninsert into {{=it.newEntity.title}}(\r\n{{~sameCols:field:index}}\r\n    {{=field.name}}{{? index<it.newEntity.fields.length-1}},{{?}}\r\n{{~}}\r\n) \r\nvalues\r\nselect \r\n{{~sameCols:field:index}}\r\n    {{=field.name}}{{? index<it.oldEntity.fields.length-1}},{{?}}\r\n{{~}}\r\nfrom PDMAN_UP_{{=it.oldEntity.title}};\r\n$blankline\r\n\r\ndrop table PDMAN_UP_{{=it.oldEntity.title}};",
@@ -1530,12 +1733,6 @@
         "deleteIndexTemplate": "",
         "createIndexTemplate": "",
         "updateTableComment": ""
-      },
-      {
-        "code": "POSTGRESQL",
-        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}  {{= field.notNull ? 'NOT NULL' : '' }} {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n);\n$blankline\nCOMMENT ON TABLE {{=it.entity.title}} IS '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}';\n{{~it.entity.fields:field:index}}\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS '{{=it.func.join(field.chnname,field.remark,';')}}';\n{{~}}",
-        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};/*SkipError*/",
-        "updateTableComment": "COMMENT ON TABLE {{=it.entity.title}} is '{{=it.entity.chnname}}';"
       }
     ]
   }
