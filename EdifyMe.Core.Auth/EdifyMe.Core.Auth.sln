@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdifyMe.Core.Auth", "EdifyMe.Core.Auth\EdifyMe.Core.Auth.csproj", "{E6AFB292-19FD-474E-9784-C6E10D6FE01D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdifyMe.Core.Auth", "EdifyMe.Core.Auth\EdifyMe.Core.Auth.csproj", "{E6AFB292-19FD-474E-9784-C6E10D6FE01D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdifyMe.Core.Data", "EdifyMe.Core.Data\EdifyMe.Core.Data.csproj", "{39AC4617-485C-4E9F-AE84-CADA0E3171C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdifyMe.Core.DbDriver", "EdifyMe.Core.DbDriver\EdifyMe.Core.DbDriver.csproj", "{6A5A95F5-4925-4E53-9154-12877DF70046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdifyMe.Core.Utils", "EdifyMe.Core.Utils\EdifyMe.Core.Utils.csproj", "{077AE733-ABFB-4655-AEE4-8001E395A539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{E6AFB292-19FD-474E-9784-C6E10D6FE01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6AFB292-19FD-474E-9784-C6E10D6FE01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6AFB292-19FD-474E-9784-C6E10D6FE01D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39AC4617-485C-4E9F-AE84-CADA0E3171C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39AC4617-485C-4E9F-AE84-CADA0E3171C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39AC4617-485C-4E9F-AE84-CADA0E3171C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39AC4617-485C-4E9F-AE84-CADA0E3171C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5A95F5-4925-4E53-9154-12877DF70046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5A95F5-4925-4E53-9154-12877DF70046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5A95F5-4925-4E53-9154-12877DF70046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5A95F5-4925-4E53-9154-12877DF70046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077AE733-ABFB-4655-AEE4-8001E395A539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077AE733-ABFB-4655-AEE4-8001E395A539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077AE733-ABFB-4655-AEE4-8001E395A539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077AE733-ABFB-4655-AEE4-8001E395A539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
