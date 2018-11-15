@@ -346,7 +346,7 @@
             },
             {
               "name": "EnglishName",
-              "type": "DefaultString",
+              "type": "ShortString",
               "remark": "",
               "chnname": "英文名"
             },
@@ -675,85 +675,91 @@
       "name": "EdifyMe",
       "entities": [
         {
-          "title": "TBL_USER",
+          "title": "sys_user",
           "fields": [
             {
-              "name": "USER_ID",
-              "type": "IdOrKey",
+              "name": "user_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "用户ID",
+              "chnname": "用户id",
               "pk": true,
               "notNull": true,
               "autoIncrement": false
             },
             {
-              "name": "USER_CODE",
+              "name": "user_code",
               "type": "DefaultString",
               "remark": "",
-              "chnname": "用户Code"
+              "chnname": "用户code"
             },
             {
-              "name": "USER_PASSWORD",
-              "type": "DefaultString",
+              "name": "user_password",
+              "type": "Name",
               "remark": "",
               "chnname": "用户密码"
             },
             {
-              "name": "USER_NAME",
-              "type": "DefaultString",
+              "name": "user_name",
+              "type": "Name",
               "remark": "",
               "chnname": "用户名称"
             },
             {
-              "name": "SEX",
+              "name": "Sex",
               "type": "Integer",
               "remark": "",
               "chnname": "性别"
             },
             {
-              "name": "MOBILE",
+              "name": "mobile",
               "type": "ShortString-20",
               "remark": "",
               "chnname": "手机号"
             },
             {
-              "name": "EMAIL",
-              "type": "DefaultString",
+              "name": "email",
+              "type": "ShortString",
               "remark": "",
               "chnname": "邮箱"
             },
             {
-              "name": "ID_CARD",
+              "name": "ic_card",
               "type": "ShortString-20",
               "remark": "",
               "chnname": "身份证号"
             },
             {
-              "name": "REVISION",
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Revison",
               "type": "Integer",
               "remark": "",
               "chnname": "乐观锁"
             },
             {
-              "name": "CREATED_BY",
-              "type": "IdOrKey",
+              "name": "CreatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "创建人"
             },
             {
-              "name": "CREATED_TIME",
+              "name": "CreateTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "创建时间"
             },
             {
-              "name": "UPDATED_BY",
-              "type": "IdOrKey",
+              "name": "UpdatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "更新人"
             },
             {
-              "name": "UPDATED_TIME",
+              "name": "UpdatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "更新时间"
@@ -806,54 +812,60 @@
           "remark": "用户"
         },
         {
-          "title": "TBL_ROLE",
+          "title": "sys_role",
           "fields": [
             {
-              "name": "ROLE_ID",
-              "type": "DefaultString",
+              "name": "role_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "角色ID",
+              "chnname": "角色id",
               "pk": true,
               "notNull": true
             },
             {
-              "name": "ROLE_NAME",
+              "name": "role_name",
               "type": "ShortString-20",
               "remark": "",
               "chnname": "角色名称"
             },
             {
-              "name": "ROLE_CODE",
+              "name": "role_name",
               "type": "ShortString-20",
               "remark": "",
-              "chnname": "角色CODE"
+              "chnname": "角色code"
             },
             {
-              "name": "REVISION",
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Reversion",
               "type": "Integer",
               "remark": "",
               "chnname": "乐观锁"
             },
             {
-              "name": "CREATED_BY",
-              "type": "IdOrKey",
+              "name": "CreatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "创建人"
             },
             {
-              "name": "CREATED_TIME",
+              "name": "CreatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "创建时间"
             },
             {
-              "name": "UPDATED_BY",
-              "type": "IdOrKey",
+              "name": "UpdatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "更新人"
             },
             {
-              "name": "UPDATED_TIME",
+              "name": "UpdatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "更新时间"
@@ -905,54 +917,60 @@
           "chnname": "角色"
         },
         {
-          "title": "TBL_USER_ROLE",
+          "title": "sys_user_role",
           "fields": [
             {
-              "name": "USER_ROLE_ID",
-              "type": "DefaultString",
+              "name": "user_role_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "用户角色ID",
+              "chnname": "用户角色id",
               "pk": true,
               "notNull": true
             },
             {
-              "name": "USER_ID",
-              "type": "DefaultString",
+              "name": "user_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "用户ID"
+              "chnname": "用户id"
             },
             {
-              "name": "ROLE_ID",
-              "type": "DefaultString",
+              "name": "role_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "角色ID"
+              "chnname": "角色id"
             },
             {
-              "name": "REVISION",
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Reversion",
               "type": "Integer",
               "remark": "",
               "chnname": "乐观锁"
             },
             {
-              "name": "CREATED_BY",
-              "type": "IdOrKey",
+              "name": "CreatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "创建人"
             },
             {
-              "name": "CREATED_TIME",
+              "name": "CreatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "创建时间"
             },
             {
-              "name": "UPDATED_BY",
-              "type": "IdOrKey",
+              "name": "UpdatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "更新人"
             },
             {
-              "name": "UPDATED_TIME",
+              "name": "UpdatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "更新时间"
@@ -1004,58 +1022,64 @@
           "chnname": "用户角色"
         },
         {
-          "title": "TBL_MENU",
+          "title": "sys_menu",
           "fields": [
             {
-              "name": "MENU_ID",
-              "type": "DefaultString",
+              "name": "menu_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "菜单ID"
+              "chnname": "菜单id"
             },
             {
-              "name": "MENU_NAME",
+              "name": "menu_name",
               "type": "DefaultString",
               "remark": "",
               "chnname": "菜单名称"
             },
             {
-              "name": "MENU_CODE",
+              "name": "menu_code",
               "type": "DefaultString",
               "remark": "",
-              "chnname": "菜单CODE"
+              "chnname": "菜单code"
             },
             {
-              "name": "MENU_ORDER",
+              "name": "menu_order",
               "type": "Integer",
               "remark": "",
               "chnname": "排序"
             },
             {
-              "name": "REVISION",
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Reversion",
               "type": "Integer",
               "remark": "",
               "chnname": "乐观锁"
             },
             {
-              "name": "CREATED_BY",
-              "type": "IdOrKey",
+              "name": "CreatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "创建人"
             },
             {
-              "name": "CREATED_TIME",
+              "name": "CreatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "创建时间"
             },
             {
-              "name": "UPDATED_BY",
-              "type": "IdOrKey",
+              "name": "UpdatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "更新人"
             },
             {
-              "name": "UPDATED_TIME",
+              "name": "UpdatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "更新时间"
@@ -1107,54 +1131,54 @@
           "chnname": "菜单"
         },
         {
-          "title": "TBL_ROLE_MENU",
+          "title": "sys_role_menu",
           "fields": [
             {
-              "name": "ROLE_MENU_ID",
-              "type": "DefaultString",
+              "name": "role_menu_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "角色菜单ID",
+              "chnname": "角色菜单id",
               "pk": true,
               "notNull": true
             },
             {
-              "name": "ROLE_ID",
-              "type": "DefaultString",
+              "name": "role_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "角色ID"
+              "chnname": "角色id"
             },
             {
-              "name": "MENU_ID",
-              "type": "DefaultString",
+              "name": "menu_id",
+              "type": "GuidString",
               "remark": "",
-              "chnname": "菜单ID"
+              "chnname": "菜单id"
             },
             {
-              "name": "REVISION",
+              "name": "Reversion",
               "type": "Integer",
               "remark": "",
               "chnname": "乐观锁"
             },
             {
-              "name": "CREATED_BY",
-              "type": "IdOrKey",
+              "name": "CreatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "创建人"
             },
             {
-              "name": "CREATED_TIME",
+              "name": "CreatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "创建时间"
             },
             {
-              "name": "UPDATED_BY",
-              "type": "IdOrKey",
+              "name": "UpdatedBy",
+              "type": "GuidString",
               "remark": "",
               "chnname": "更新人"
             },
             {
-              "name": "UPDATED_TIME",
+              "name": "UpdatedTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "更新时间"
@@ -1210,7 +1234,7 @@
         "nodes": [
           {
             "shape": "table",
-            "title": "TBL_USER",
+            "title": "sys_user",
             "moduleName": false,
             "x": -70,
             "y": 20,
@@ -1218,7 +1242,7 @@
           },
           {
             "shape": "table",
-            "title": "TBL_ROLE_MENU",
+            "title": "sys_role_menu",
             "moduleName": false,
             "x": 780,
             "y": 350,
@@ -1226,7 +1250,7 @@
           },
           {
             "shape": "table",
-            "title": "TBL_ROLE",
+            "title": "sys_role",
             "moduleName": false,
             "x": 400,
             "y": 0,
@@ -1234,7 +1258,7 @@
           },
           {
             "shape": "table",
-            "title": "TBL_USER_ROLE",
+            "title": "sys_user_role",
             "moduleName": false,
             "x": 100,
             "y": 360,
@@ -1242,7 +1266,7 @@
           },
           {
             "shape": "table",
-            "title": "TBL_MENU",
+            "title": "sys_menu",
             "moduleName": false,
             "x": 880,
             "y": 10,
@@ -1320,10 +1344,342 @@
         ]
       },
       "associations": []
+    },
+    {
+      "name": "PowerBIReport",
+      "chnname": "园区",
+      "entities": [
+        {
+          "title": "TBLReport",
+          "fields": [
+            {
+              "name": "ReportId",
+              "type": "ShortString-50",
+              "remark": "",
+              "chnname": "报表Id",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "ReportName",
+              "type": "ShortString-256",
+              "remark": "",
+              "chnname": "报表名称"
+            },
+            {
+              "name": "ReportUrl",
+              "type": "ShortString-512",
+              "remark": "",
+              "chnname": "报表Url"
+            },
+            {
+              "name": "ReportMenuId",
+              "type": "ShortString-50",
+              "remark": "",
+              "chnname": "报表菜单"
+            },
+            {
+              "name": "ReportRouter",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "报表路由"
+            },
+            {
+              "name": "RefreshTime",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "报表刷新间隔"
+            },
+            {
+              "name": "ReportOrder",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "排序"
+            },
+            {
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATEDBY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATEDTIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATEDBY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATEDTIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "报表"
+        },
+        {
+          "title": "TBLReportMenu",
+          "fields": [
+            {
+              "name": "ReportMenuId",
+              "type": "ShortString-50",
+              "remark": "",
+              "chnname": "主键",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "MenuName",
+              "type": "ShortString-50-字符",
+              "remark": "",
+              "chnname": "菜单名称"
+            },
+            {
+              "name": "MenuOrder",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "菜单顺序"
+            },
+            {
+              "name": "ParentId",
+              "type": "ShortString-50",
+              "remark": "",
+              "chnname": "父级菜单"
+            },
+            {
+              "name": "Level",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "层级"
+            },
+            {
+              "name": "LevelCode",
+              "type": "ShortString-256",
+              "remark": "",
+              "chnname": "层级码"
+            },
+            {
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "REVISION",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CREATEDBY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CREATEDTIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UPDATEDBY",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UPDATEDTIME",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "报表菜单"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [
+          {
+            "shape": "table",
+            "title": "TBLReportMenu",
+            "moduleName": false,
+            "x": 780,
+            "y": 300,
+            "id": "0e817684"
+          },
+          {
+            "shape": "table",
+            "title": "TBLReport",
+            "moduleName": false,
+            "x": 290,
+            "y": 250,
+            "id": "86a09ecf"
+          }
+        ],
+        "edges": [
+          {
+            "shape": "polyLineFlow",
+            "source": "86a09ecf",
+            "target": "0e817684",
+            "id": "64058b14",
+            "controlPoints": [
+              {
+                "x": 435.98828125,
+                "y": 232.42391304347825
+              },
+              {
+                "x": 634.01171875,
+                "y": 202.13888888888889
+              }
+            ],
+            "sourceAnchor": 7,
+            "targetAnchor": 0
+          }
+        ]
+      },
+      "associations": [
+        {
+          "relation": "",
+          "from": {
+            "entity": "TBLReport",
+            "field": "ReportMenuId"
+          },
+          "to": {
+            "entity": "TBLReportMenu",
+            "field": "ReportMenuId"
+          }
+        }
+      ]
     }
   ],
   "dataTypeDomains": {
     "datatype": [
+      {
+        "name": "guid字串",
+        "code": "GuidString",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(36)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(36)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(36)"
+          },
+          "SQLSERVER": {
+            "type": "VARCHAR2(36)"
+          }
+        }
+      },
       {
         "name": "默认字串",
         "code": "DefaultString",
@@ -1339,6 +1695,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(32)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR2(32)"
           }
         }
       },
@@ -1357,6 +1716,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(32)"
+          },
+          "SQLSERVER": {
+            "type": "VARCHAR(32)"
           }
         }
       },
@@ -1375,6 +1737,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(128)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR2(128)"
           }
         }
       },
@@ -1393,6 +1758,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(512)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR2(512)"
           }
         }
       },
@@ -1411,6 +1779,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(20)"
+          },
+          "SQLSERVER": {
+            "type": "VARCHAR(20)"
           }
         }
       },
@@ -1429,6 +1800,30 @@
           },
           "POSTGRESQL": {
             "type": "character varying(50)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR(50)"
+          }
+        }
+      },
+      {
+        "name": "字串-50-字符",
+        "code": "ShortString-50-字符",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(50)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(50)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(50)"
+          },
+          "SQLSERVER": {
+            "type": "VARCHAR(50)"
           }
         }
       },
@@ -1447,6 +1842,30 @@
           },
           "POSTGRESQL": {
             "type": "character varying(256)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR(256)"
+          }
+        }
+      },
+      {
+        "name": "字串-512",
+        "code": "ShortString-512",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(512)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(512)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "POSTGRESQL": {
+            "type": "character varying(512)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR(512)"
           }
         }
       },
@@ -1465,6 +1884,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(128)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR2(128)"
           }
         }
       },
@@ -1483,6 +1905,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(1024)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR2(1024)"
           }
         }
       },
@@ -1501,6 +1926,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(3120)"
+          },
+          "SQLSERVER": {
+            "type": "NVARCHAR2(3120)"
           }
         }
       },
@@ -1519,6 +1947,9 @@
           },
           "POSTGRESQL": {
             "type": "text"
+          },
+          "SQLSERVER": {
+            "type": "NVARHCAR(MAX)"
           }
         }
       },
@@ -1537,6 +1968,9 @@
           },
           "POSTGRESQL": {
             "type": "json"
+          },
+          "SQLSERVER": {
+            "type": "NVARHCAR(MAX)"
           }
         }
       },
@@ -1555,6 +1989,9 @@
           },
           "POSTGRESQL": {
             "type": "decimal(64.16)"
+          },
+          "SQLSERVER": {
+            "type": "DECIMAL(64,16)"
           }
         }
       },
@@ -1573,6 +2010,9 @@
           },
           "POSTGRESQL": {
             "type": "decimal(4,2)"
+          },
+          "SQLSERVER": {
+            "type": "DECIMAL(4,2)"
           }
         }
       },
@@ -1591,6 +2031,9 @@
           },
           "POSTGRESQL": {
             "type": "Integer"
+          },
+          "SQLSERVER": {
+            "type": "INT"
           }
         }
       },
@@ -1608,6 +2051,9 @@
             "type": "Double"
           },
           "POSTGRESQL": {
+            "type": "decimal(32,8)"
+          },
+          "SQLSERVER": {
             "type": "decimal(32,8)"
           }
         }
@@ -1627,6 +2073,9 @@
           },
           "POSTGRESQL": {
             "type": "boolean"
+          },
+          "SQLSERVER": {
+            "type": "bit"
           }
         }
       },
@@ -1645,6 +2094,9 @@
           },
           "POSTGRESQL": {
             "type": "character varying(32)"
+          },
+          "SQLSERVER": {
+            "type": "VARCHAR(32)"
           }
         }
       },
@@ -1662,6 +2114,9 @@
             "type": "Date"
           },
           "POSTGRESQL": {
+            "type": "DATE"
+          },
+          "SQLSERVER": {
             "type": "DATE"
           }
         }
@@ -1681,6 +2136,9 @@
           },
           "POSTGRESQL": {
             "type": "timestamp without time zone"
+          },
+          "SQLSERVER": {
+            "type": "DATETIME"
           }
         }
       }
@@ -1733,7 +2191,58 @@
         "deleteIndexTemplate": "",
         "createIndexTemplate": "",
         "updateTableComment": ""
+      },
+      {
+        "code": "SQLSERVER",
+        "fileShow": false,
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'AUTO_INCREMENT' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }}  {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) ;",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}};/*SkipError*/",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.pk}}PRIMARY KEY{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}} {{? it.field.addAfter}}AFTER {{=it.field.addAfter}}{{?}};",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? ''!=it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}};"
       }
     ]
+  },
+  "profile": {
+    "defaultFields": [
+      {
+        "name": "StateCode",
+        "type": "Integer",
+        "remark": "",
+        "chnname": "状态"
+      },
+      {
+        "name": "Revison",
+        "type": "Integer",
+        "remark": "",
+        "chnname": "乐观锁"
+      },
+      {
+        "name": "CreatedBy",
+        "type": "GuidString",
+        "remark": "",
+        "chnname": "创建人"
+      },
+      {
+        "name": "CreatedTime",
+        "type": "DateTime",
+        "remark": "",
+        "chnname": "创建时间"
+      },
+      {
+        "name": "UpdatedBy",
+        "type": "GuidString",
+        "remark": "",
+        "chnname": "更新人"
+      },
+      {
+        "name": "UpdatedTime",
+        "type": "DateTime",
+        "remark": "",
+        "chnname": "更新时间"
+      }
+    ],
+    "javaConfig": {},
+    "sqlConfig": "/*SQL@Run*/",
+    "dbs": []
   }
 }
