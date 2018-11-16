@@ -40,7 +40,8 @@ namespace EdifyMe.Core.Auth
                         new Secret("secret".Sha256())
                     },
 
-                    AllowedScopes = { "edify.me.core", IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile }
+                    AllowedScopes = { "edify.me.core", IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile },
+                    AllowOfflineAccess = true,
                 }
             };
         }

@@ -1236,119 +1236,712 @@
             "shape": "table",
             "title": "sys_user",
             "moduleName": false,
-            "x": -70,
+            "x": -60,
             "y": 20,
             "id": "132a26e3"
           },
           {
             "shape": "table",
-            "title": "sys_role_menu",
-            "moduleName": false,
-            "x": 780,
-            "y": 350,
-            "id": "2803142e"
-          },
-          {
-            "shape": "table",
-            "title": "sys_role",
-            "moduleName": false,
-            "x": 400,
-            "y": 0,
-            "id": "2744d7fb"
-          },
-          {
-            "shape": "table",
             "title": "sys_user_role",
             "moduleName": false,
-            "x": 100,
+            "x": 50,
             "y": 360,
             "id": "e8c331b0"
           },
           {
             "shape": "table",
+            "title": "sys_role",
+            "moduleName": false,
+            "x": 350,
+            "y": 0,
+            "id": "2744d7fb"
+          },
+          {
+            "shape": "table",
+            "title": "sys_role_menu",
+            "moduleName": false,
+            "x": 700,
+            "y": 40,
+            "id": "2803142e"
+          },
+          {
+            "shape": "table",
             "title": "sys_menu",
             "moduleName": false,
-            "x": 880,
-            "y": 10,
+            "x": 610,
+            "y": 320,
             "id": "3ccdaddd"
           }
         ],
         "edges": [
           {
             "shape": "polyLineFlow",
-            "source": "132a26e3",
-            "target": "e8c331b0",
-            "id": "45f02fb9",
+            "source": "e8c331b0",
+            "target": "132a26e3",
+            "id": "24ee3241",
             "controlPoints": [
               {
-                "x": 68.6552734375,
-                "y": 132.95
+                "x": -83.4765625,
+                "y": 312.2738095238095
               },
               {
-                "x": -45.1943359375,
-                "y": 302.1973684210526
+                "x": -194.4599609375,
+                "y": -97.87903225806451
               }
-            ]
+            ],
+            "sourceAnchor": 2,
+            "targetAnchor": 0
           },
           {
             "shape": "polyLineFlow",
-            "source": "2744d7fb",
-            "target": "e8c331b0",
-            "id": "da4dc5de",
+            "source": "e8c331b0",
+            "target": "2744d7fb",
+            "id": "3da416be",
             "controlPoints": [
               {
-                "x": 255.759765625,
-                "y": 82.93421052631578
+                "x": 183.4765625,
+                "y": 332.3690476190476
               },
               {
-                "x": 245.1943359375,
-                "y": 302.1973684210526
+                "x": 220.4326171875,
+                "y": -67.82142857142857
               }
             ],
-            "sourceAnchor": 14
+            "sourceAnchor": 5,
+            "targetAnchor": 0
           },
           {
             "shape": "polyLineFlow",
-            "source": "2744d7fb",
-            "target": "2803142e",
-            "id": "ba83ce95",
+            "source": "2803142e",
+            "target": "2744d7fb",
+            "id": "8bdd91ca",
             "controlPoints": [
               {
-                "x": 544.240234375,
-                "y": 82.93421052631578
+                "x": 565.7109375,
+                "y": 2.30263157894737
               },
               {
-                "x": 633.8095703125,
-                "y": 292.1973684210526
+                "x": 479.5673828125,
+                "y": -67.82142857142857
               }
             ],
-            "sourceAnchor": 15
+            "sourceAnchor": 2,
+            "targetAnchor": 1
           },
           {
             "shape": "polyLineFlow",
-            "source": "3ccdaddd",
-            "target": "2803142e",
-            "id": "0f1a9250",
+            "source": "2803142e",
+            "target": "3ccdaddd",
+            "id": "aaafe476",
             "controlPoints": [
               {
-                "x": 752.771484375,
-                "y": 102.94047619047618
+                "x": 565.7109375,
+                "y": 22.40789473684211
               },
               {
-                "x": 926.1904296875,
-                "y": 292.1973684210526
+                "x": 497.1943359375,
+                "y": 242.16304347826087
               }
             ],
-            "sourceAnchor": 16
+            "sourceAnchor": 4,
+            "targetAnchor": 0
           }
         ]
       },
-      "associations": []
+      "associations": [
+        {
+          "relation": "",
+          "from": {
+            "entity": "sys_user_role",
+            "field": "user_id"
+          },
+          "to": {
+            "entity": "sys_user",
+            "field": "user_id"
+          }
+        },
+        {
+          "relation": "",
+          "from": {
+            "entity": "sys_user_role",
+            "field": "role_id"
+          },
+          "to": {
+            "entity": "sys_role",
+            "field": "role_id"
+          }
+        },
+        {
+          "relation": "",
+          "from": {
+            "entity": "sys_role_menu",
+            "field": "role_id"
+          },
+          "to": {
+            "entity": "sys_role",
+            "field": "role_id"
+          }
+        },
+        {
+          "relation": "",
+          "from": {
+            "entity": "sys_role_menu",
+            "field": "menu_id"
+          },
+          "to": {
+            "entity": "sys_menu",
+            "field": "menu_id"
+          }
+        }
+      ]
     },
     {
       "name": "PowerBIReport",
       "chnname": "园区",
       "entities": [
+        {
+          "title": "TBLUser",
+          "fields": [
+            {
+              "name": "UserId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "用户Id",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "UserName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "用户名"
+            },
+            {
+              "name": "UserCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "登录名"
+            },
+            {
+              "name": "Password",
+              "type": "ShortString-256",
+              "remark": "",
+              "chnname": "登录密码"
+            },
+            {
+              "name": "Mobile",
+              "type": "ShortString-20",
+              "remark": "",
+              "chnname": "手机号"
+            },
+            {
+              "name": "Email",
+              "type": "ShortString-50",
+              "remark": "",
+              "chnname": "邮箱"
+            },
+            {
+              "name": "Sex",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "性别"
+            },
+            {
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Revison",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CreatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UpdatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UpdatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "用户"
+        },
+        {
+          "title": "TBLRole",
+          "fields": [
+            {
+              "name": "RoleId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "角色Id",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "RoleName",
+              "type": "ShortString-50",
+              "remark": "",
+              "chnname": "角色名称"
+            },
+            {
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Revison",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CreatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UpdatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UpdatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "角色"
+        },
+        {
+          "title": "TBLUserRole",
+          "fields": [
+            {
+              "name": "UserRoleId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "UserRoleId",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "UserId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "用户Id"
+            },
+            {
+              "name": "RoleId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "角色Id"
+            },
+            {
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Revison",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CreatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UpdatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UpdatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "用户角色"
+        },
+        {
+          "title": "TBLMenu",
+          "fields": [
+            {
+              "name": "MenuId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "菜单Id",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "MenuName",
+              "type": "ShortString-20",
+              "remark": "",
+              "chnname": "菜单名称"
+            },
+            {
+              "name": "MenuOrder",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "排序"
+            },
+            {
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Revison",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CreatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UpdatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UpdatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "菜单"
+        },
+        {
+          "title": "TBLRoleMenu",
+          "fields": [
+            {
+              "name": "MenuRoleId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "角色菜单Id",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "MenuId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "角色Id"
+            },
+            {
+              "name": "RoleId",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "菜单Id"
+            },
+            {
+              "name": "StateCode",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "状态"
+            },
+            {
+              "name": "Revison",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "乐观锁"
+            },
+            {
+              "name": "CreatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CreatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UpdatedBy",
+              "type": "GuidString",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UpdatedTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "角色菜单"
+        },
         {
           "title": "TBLReport",
           "fields": [
@@ -1380,7 +1973,7 @@
             },
             {
               "name": "ReportRouter",
-              "type": "ShortString",
+              "type": "ShortString-512",
               "remark": "",
               "chnname": "报表路由"
             },
@@ -2241,7 +2834,9 @@
         "chnname": "更新时间"
       }
     ],
-    "javaConfig": {},
+    "javaConfig": {
+      "JAVA_HOME": "C:\\Program Files (x86)\\Java\\jdk1.8.0_181"
+    },
     "sqlConfig": "/*SQL@Run*/",
     "dbs": []
   }

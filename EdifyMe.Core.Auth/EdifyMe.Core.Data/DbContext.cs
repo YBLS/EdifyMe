@@ -27,6 +27,16 @@ namespace EdifyMe.Core.Data
             return _dbConnection.Query<T>(sql, param, transaction);
         }
 
+        public static dynamic QueryFirstOrDefault(string sql, object param = null, IDbTransaction transaction = null)
+        {
+            return _dbConnection.QueryFirstOrDefault(sql, param, transaction);
+        }
+
+        public static T QueryFirstOrDefault<T>(string sql, object param = null, IDbTransaction transaction = null)
+        {
+            return _dbConnection.QueryFirstOrDefault<T>(sql, param, transaction);
+        }
+
         public static void Insert(string sql, object param = null, IDbTransaction transaction = null)
         {
             _dbConnection.Execute(sql, param, transaction);
@@ -43,6 +53,16 @@ namespace EdifyMe.Core.Data
         }
 
         public static int BatchUpdate(string sql, object param = null, IDbTransaction transaction = null)
+        {
+            return _dbConnection.Execute(sql, param, transaction);
+        }
+
+        public static void Delete(string sql, object param = null, IDbTransaction transaction = null)
+        {
+            _dbConnection.Execute(sql, param, transaction);
+        }
+
+        public static int BatchDelete(string sql, object param = null, IDbTransaction transaction = null)
         {
             return _dbConnection.Execute(sql, param, transaction);
         }
