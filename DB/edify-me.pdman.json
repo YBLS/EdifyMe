@@ -2269,7 +2269,7 @@
             "type": "character varying(36)"
           },
           "SQLSERVER": {
-            "type": "VARCHAR2(36)"
+            "type": "VARCHAR(36)"
           }
         }
       },
@@ -2290,7 +2290,7 @@
             "type": "character varying(32)"
           },
           "SQLSERVER": {
-            "type": "NVARCHAR2(32)"
+            "type": "NVARCHAR(32)"
           }
         }
       },
@@ -2332,7 +2332,7 @@
             "type": "character varying(128)"
           },
           "SQLSERVER": {
-            "type": "NVARCHAR2(128)"
+            "type": "NVARCHAR(128)"
           }
         }
       },
@@ -2353,7 +2353,7 @@
             "type": "character varying(512)"
           },
           "SQLSERVER": {
-            "type": "NVARCHAR2(512)"
+            "type": "NVARCHAR(512)"
           }
         }
       },
@@ -2479,7 +2479,7 @@
             "type": "character varying(128)"
           },
           "SQLSERVER": {
-            "type": "NVARCHAR2(128)"
+            "type": "NVARCHAR(128)"
           }
         }
       },
@@ -2500,7 +2500,7 @@
             "type": "character varying(1024)"
           },
           "SQLSERVER": {
-            "type": "NVARCHAR2(1024)"
+            "type": "NVARCHAR(1024)"
           }
         }
       },
@@ -2521,7 +2521,7 @@
             "type": "character varying(3120)"
           },
           "SQLSERVER": {
-            "type": "NVARCHAR2(3120)"
+            "type": "NVARCHAR(3120)"
           }
         }
       },
